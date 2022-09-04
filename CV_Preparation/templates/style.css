@@ -24,6 +24,19 @@
     height: 100vh;
     background-size: 100% 100%;
 }
+
+/*Profil*/
+.container3{
+    background: url(images/resim_2.jpg);
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.container3 .navbar{
+    width: 100%;
+    height: 80px;
+    background: rgba(80, 74, 163, 0.459);
+}
 /*Kisisel*/
 .container2 .navbar{
     width: 100%;
@@ -182,21 +195,43 @@ ul li.menu ul:active{
     user-select: none;
 }
 /*Hakkımızda*/
-.header h3{
-    margin-top: 12px;
-    margin-left: 45%;
-    width: 110px;
-    color: white;
-    user-select: none;
+.inner_header{
+    width: 70%;
+    overflow: auto;
+    height: 350px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(242, 242, 242);
+    padding: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    z-index: 0;
 }
 
-.header p.yazi{
-    margin-top: 12px;
-    margin-left: 38%;
-    width: 300px;
-    color: white;
+.about{
+    width: 100%;
+    height: 250px;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 10px;
+}
+
+.about h3{
+    margin-left: 45%;
+    width: 200px;
+    color: rgb(0, 0, 0);
     user-select: none;
-    background-color: rgb(47, 85, 255);
+    font-size: 30px;
+}
+
+.about p.yazi{
+    margin-top: 12px;
+    margin-left: 10%;
+    font-size: 20px;
+    width: 80%;
+    color: black;
+    user-select: none;
+    background-color: rgb(242, 242, 242);
 }
 /*Iletisim*/
 .section{
@@ -669,3 +704,195 @@ h2{
     float: right;
 }
 
+/*Profil*/
+.addWork{
+    color: #4c4c4c;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    outline: none;
+    position: relative;
+    font-size: 15px;
+    padding: 18px 0 18px 0;
+    display: inline-block;
+    min-width: 240px;
+    border-radius: 31px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addWork svg{
+    top: 17px;
+    margin-left: -24px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.deleteWork{
+    float: right;
+    display: inline;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px 9px 7px 9px;
+    text-align: center;
+    color: #4c4c4c;
+    cursor: pointer;
+    font-size: 13px;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border: 2px solid #e6e5e5;
+}
+
+.deleteWork svg{
+    width: 18px;
+    height: 20px;
+}
+
+.addEdu{
+    color: #4c4c4c;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    outline: none;
+    position: relative;
+    font-size: 15px;
+    padding: 18px 0 18px 0;
+    display: inline-block;
+    min-width: 240px;
+    border-radius: 31px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addEdu svg{
+    top: 17px;
+    margin-left: -24px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.deleteEdu{
+    float: right;
+    display: inline;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px 9px 7px 9px;
+    text-align: center;
+    color: #4c4c4c;
+    cursor: pointer;
+    font-size: 13px;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border: 2px solid #e6e5e5;
+}
+
+.deleteEdu svg{
+    width: 18px;
+    height: 20px;
+}
+
+.addLang{
+    color: #4c4c4c;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    outline: none;
+    position: relative;
+    font-size: 15px;
+    padding: 18px 0 18px 0;
+    display: inline-block;
+    min-width: 240px;
+    border-radius: 31px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addLang svg{
+    top: 17px;
+    margin-left: -24px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.deleteLang{
+    float: right;
+    display: inline;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px 9px 7px 9px;
+    text-align: center;
+    color: #4c4c4c;
+    cursor: pointer;
+    font-size: 13px;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border: 2px solid #e6e5e5;
+}
+
+.addSkill{
+    color: #4c4c4c;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    outline: none;
+    position: relative;
+    font-size: 15px;
+    padding: 18px 0 18px 0;
+    display: inline-block;
+    min-width: 240px;
+    border-radius: 31px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.addSkill svg{
+    top: 17px;
+    margin-left: -24px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.deleteSkill{
+    float: right;
+    display: inline;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px 9px 7px 9px;
+    text-align: center;
+    color: #4c4c4c;
+    cursor: pointer;
+    font-size: 13px;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    border: 2px solid #e6e5e5;
+}
+
+.deleteSkill svg{
+    width: 18px;
+    height: 20px;
+}
+
+.button{
+    padding: 0 25px 0 25px;
+}
+
+.deleteLang svg{
+    width: 18px;
+    height: 20px;
+}
