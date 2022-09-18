@@ -1,0 +1,654 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>CV Builder - Kişisel Bilgiler</title>
+{% endblock title %}
+
+{% block navbar %}
+    {% include "includes/navbar1.html" %}
+{% endblock navbar %}
+
+{% block header %}
+    <style>
+        .header{
+            background: rgb(94, 10, 150);
+            width: 100%;
+            height: 25px;
+        }
+
+        .header p{
+            text-align: center;
+            margin-top: 8px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            user-select: none;
+        }
+    </style>
+
+    <div class = "header">
+        <p>Kişisel Bilgiler</p>
+    </div>
+{% endblock header %}
+
+{% block body %}
+    {% from "includes/formhelpers.html" import render_field %}
+    <style>
+        .wizard_inner{
+            position: relative;
+            z-index: 0;
+        }
+
+        .form_personal{
+            opacity: 1;
+        }
+
+        .section1{
+            width: 90%;
+            position: relative;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(242, 242, 242);
+            padding: 50px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+            z-index: 0;
+        }
+
+        .form1{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgb(216, 216, 216);
+            padding: 10px;
+            margin-right: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        h3{
+            text-align:center;
+        }
+
+        form{
+            width:85%;
+            padding-left: 100px;
+        }
+
+        hr{
+            width:75%;
+            margin-left: 85px;
+        }
+
+        .inline{
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .foto1{
+            float: left;
+            height: 152px;
+            width: 152px;
+            text-align: center;
+            background: #f5f5f5;
+            background-size: cover !important;
+            transition: all 200ms ease-in-out;
+            box-shadow: 0px 0px 3px 0px #d3cfcf;
+            position: relative;
+            margin: 15px 0 0 20px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 2px dotted #dddbdb;
+            display: inline;
+        }
+
+        .label{
+            top: 0;
+            padding-top: 29px;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+        .label input[type = file]{
+            display: none;
+        }
+
+        .label svg{
+            fill: #888;
+            height: 90px;
+            width: 55px;
+        }
+
+        .label .text{
+            display: flex;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 12px;
+            left: 10px;
+            color: #888;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .isim{
+            float: left;
+            display: inline;
+            margin: 0;
+            padding: 0 0 0 40px;
+            height: auto;
+            width: calc(95% - 152px);
+        }
+
+        .fn:first-child{
+            margin-top: 0;
+        }
+
+        .fn{
+            margin-top: 15px;
+            width: 100%;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ln{
+            margin-top: 15px;
+            width: 100%;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .e_mail{
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 20px;
+            width: 47%;
+        }
+
+        .tel{
+            float: right;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 20px 0 0;
+            width: 47%;
+        }
+
+        .yol{
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 15px 0 20px;
+            width: 99%;
+        }
+
+        div{
+            display: block;
+        }
+
+        .code{
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 20px;
+            width: 47%;
+        }
+
+        .ilce{
+            float: right;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 20px 0 0;
+            width: 47%;
+        }
+
+        .extra{
+            display: block;
+            opacity: 1;
+            padding-bottom: 0;
+        }
+
+        .inner{
+            margin-bottom: 0px;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .col1{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .col2:not(.gender):nth-child(odd){
+            padding-right: 10px;
+        }
+
+        .col2{
+            width: 50%;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 20px 0 20px;
+        }
+
+        .col2 input[name=place]{
+            width: 100%;
+            padding: 15px 12px 15px 12px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 4px;
+        }
+
+        .col2.gender{
+            padding-left: 10px;
+        }
+
+        .gun{
+            width: 35%;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 15px 0 0;
+        }
+
+        .txt{
+            width: 200px;
+            display: inline-block;
+            padding: 0 0 8px;
+            overflow: initial;
+        }
+
+        .day{
+            box-shadow: none;
+            appearance: none;
+            position: relative;
+            background-color: transparent;
+            background-image: none;
+            padding-left: 14px;
+            border: 2px solid #eaeaea;
+            cursor: pointer;
+            border-radius: 3px;
+            outline: none;
+            width: 100%;
+            padding: 0 14px 1px;
+            height: 48px;
+            font-size: 16px;
+        }
+
+        .ok{
+            width: 0;
+            height: 0;
+            float: right;
+            display: inline;
+            margin: -23px 13px 0 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #4c4c4c;
+        }
+
+        .ay{
+            width: 35%;
+            padding: 0 20px 0 15px;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+        }
+
+        .yil{
+            width: 30%;
+            padding: 0 0 0 20px;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            right: 15px;
+        }
+
+        .col3{
+            width: 49%;
+            float: left;
+            display: inline;
+            position: relative;
+            margin: 0;
+            padding: 0 20px 0 20px;
+        }
+
+        .form_buttons{
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 10px 0 40px;
+        }
+
+        .form_button{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .next{
+            color: #fff;
+            background: #481e80;
+            transition: all 0.5s ease;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+            outline: none;
+            position: relative;
+            font-size: 18px;
+            padding: 18px 20px 19px 0;
+            display: inline-block;
+            min-width: 240px;
+            border-radius: 31px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .arrow_right{
+            position: absolute;
+            top: 11px;
+            right: 20px;
+        }
+
+        .arrow_right svg{
+            height: 35px;
+            width: 35px;
+        }
+
+        .privacy_policy{
+            font-size: 14px !important;
+            color: #9e9e9e;
+            display: block;
+            font-size: 13px;
+            text-align: center;
+            margin: 35px 0 30px 0;
+            padding: 0 150px;
+        }
+
+        .privacy_policy a{
+            line-height: 14px;
+            font-size: 14px !important;
+            color: #9e9e9e;
+            text-decoration: underline;
+            outline: none;
+        }
+    </style>
+
+    <div class="wizard_inner">
+        <div class="form_personal">
+            <div class="section1">
+                <div class="form1">
+                    <h3>Kişisel Bilgiler</h3>
+                    <hr>
+                    <form method = "POST" enctype = "multipart/form-data">
+                        <div class="inline">
+                            <div class="foto1">
+                                <div class="label">
+                                    <input type="file" name="file" id="file" accept="image/*">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="3.2"></circle>
+                                        <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"></path>
+                                    </svg>
+                                    <label for="file" class="text">Fotoğraf Ekle</label>
+                                </div>
+                            </div>
+                            <div class="isim">
+                                <div class="fn">
+                                    {{ render_field(form.name, class="form-control", placeholder = "Adınızı Giriniz") }}
+                                </div>
+                                <div class="ln">
+                                    {{ render_field(form.surname, class="form-control", placeholder = "Soyadınızı Giriniz") }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="e_mail">
+                                {{ render_field(form.email, class="form-control") }}
+                            </div>
+                            <div class="tel">
+                                {{ render_field(form.phone, class="form-control") }}
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="inline">
+                                <div class="yol">
+                                    {{ render_field(form.address, class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="inline">
+                                <div>
+                                    <div class="code">
+                                        {{ render_field(form.post_code, class="form-control") }}
+                                    </div>
+                                    <div class="ilce">
+                                        {{ render_field(form.city, class="form-control", placeholder = "Örn. İstanbul") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div>
+                            <div class="extra">
+                                <div class="inline">
+                                    <div class="inner">
+                                        <div class="col1">
+                                            <div class="col2">
+                                                <div class="gun">
+                                                    <label class="txt" style = "font-weight: bold;"> Doğum Tarihi</label>
+                                                    <select class="day" name="days">
+                                                        <option value="0">Gün</option>
+                                                        <option value="01">1</option>
+                                                        <option value="02">2</option>
+                                                        <option value="03">3</option>
+                                                        <option value="04">4</option>
+                                                        <option value="05">5</option>
+                                                        <option value="06">6</option>
+                                                        <option value="07">7</option>
+                                                        <option value="08">8</option>
+                                                        <option value="09">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                        <option value="31">31</option>
+                                                    </select>
+                                                    <i class="ok"></i>
+                                                </div>
+                                                <div class="ay">
+                                                    <label class="txt">&nbsp;</label>
+                                                    <select name="aylar" class="day">
+                                                        <option value="0">Ay</option>
+                                                        <option value="01">Ocak</option>
+                                                        <option value="02">Şubat</option>
+                                                        <option value="03">Mart</option>
+                                                        <option value="04">Nisan</option>
+                                                        <option value="05">Mayıs</option>
+                                                        <option value="06">Haziran</option>
+                                                        <option value="07">Temmuz</option>
+                                                        <option value="08">Ağustos</option>
+                                                        <option value="09">Eylül</option>
+                                                        <option value="10">Ekim</option>
+                                                        <option value="11">Kasım</option>
+                                                        <option value="12">Aralık</option>
+                                                    </select>
+                                                    <i class="ok"></i>
+                                                </div>
+                                                <div class="yil">
+                                                    <label class="txt">&nbsp;</label>
+                                                    <select name="yillar" class="day">
+                                                        <option value="0">Yıl</option>
+                                                        <option value="11">2011</option>
+                                                        <option value="10">2010</option>
+                                                        <option value="09">2009</option>
+                                                        <option value="08">2008</option>
+                                                        <option value="07">2007</option>
+                                                        <option value="06">2006</option>
+                                                        <option value="05">2005</option>
+                                                        <option value="04">2004</option>
+                                                        <option value="03">2003</option>
+                                                        <option value="02">2002</option>
+                                                        <option value="01">2001</option>
+                                                        <option value="00">2000</option>
+                                                        <option value="1999">1999</option>
+                                                        <option value="1998">1998</option>
+                                                        <option value="1997">1997</option>
+                                                        <option value="1996">1996</option>
+                                                        <option value="1995">1995</option>
+                                                        <option value="1994">1994</option>
+                                                        <option value="1993">1993</option>
+                                                        <option value="1992">1992</option>
+                                                        <option value="1991">1991</option>
+                                                        <option value="1990">1990</option>
+                                                        <option value="1989">1989</option>
+                                                        <option value="1988">1988</option>
+                                                        <option value="1987">1987</option>
+                                                        <option value="1986">1986</option>
+                                                        <option value="1985">1985</option>
+                                                        <option value="1984">1984</option>
+                                                        <option value="1983">1983</option>
+                                                        <option value="1982">1982</option>
+                                                        <option value="1981">1981</option>
+                                                        <option value="1980">1980</option>
+                                                        <option value="1979">1979</option>
+                                                        <option value="1978">1978</option>
+                                                        <option value="1977">1977</option>
+                                                        <option value="1976">1976</option>
+                                                        <option value="1975">1975</option>
+                                                        <option value="1974">1974</option>
+                                                        <option value="1973">1973</option>
+                                                        <option value="1972">1972</option>
+                                                    </select>
+                                                    <i class="ok"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                {{ render_field(form.birthplace, class="form-control", style = "margin-top: 10px;") }}
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div>
+                                                <div class="ehliyet">
+                                                    <div class="col3" name="licences">
+                                                        {{ render_field(form.license, class="form-control")}}
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <label for="gender" style = "font-weight: bold;">Cinsiyet</label>
+                                                    <select name="gender" id="" class="day">
+                                                        <option value="0">Seç</option>
+                                                        <option value="erkek">Erkek</option>
+                                                        <option value="kadin">Kadın</option>
+                                                    </select>
+                                                    <i class="ok"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div>
+                                                <div class="col3">
+                                                    {{ render_field(form.military, class="form-control") }}
+                                                </div>
+                                                <div class="col2">
+                                                    <label for="marital" style = "font-weight: bold;">Medeni Durum</label>
+                                                    <select name="marital" id="" class="day">
+                                                        <option value="0">Seç</option>
+                                                        <option value="evli">Evli</option>
+                                                        <option value="bekar">Bekar</option>
+                                                    </select>
+                                                    <i class="ok"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div>
+                                                <div class="col3">
+                                                    {{ render_field(form.linkedin, class="form-control") }}
+                                                </div>
+                                                <div class="col2">
+                                                    {{ render_field(form.instagram, class="form-control") }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col1">
+                                            <div>
+                                                <div class="col3">
+                                                    {{ render_field(form.github, class="form-control") }}
+                                                </div>
+                                                <div class="col2">
+                                                    {{ render_field(form.website, class="form-control") }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form_buttons">
+                            <div class="form_button">
+                                <button type="submit" class="next">
+                                    <div class="spinner_hidden"></div>
+                                    Sonraki Adım
+                                    <div class="arrow_right">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="svg-keyboard-arrow-right" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="privacy_policy">
+                                Sonraki adıma tıklayarak CV'nizi oluşturmaya başlayacaksınız ve 
+                                <a target="_blank" href="/privacy">genel şartlar</a>
+                                ve 
+                                <a target="_blank" href="/policy">gizlilik politikası</a>
+                                maddelerini kabul etmiş sayılacaksınız.
+                            </div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

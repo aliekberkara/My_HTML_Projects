@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>PC MAN - Projeler</title>
+{% endblock title %}
+
+{% block header %}
+    <style>
+        .header{
+            background: rgb(94, 10, 150);
+            width: 100%;
+            height: 25px;
+        }
+
+        .header p{
+            text-align: center;
+            margin-top: 8px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            user-select: none;
+        }
+    </style>
+
+    <div class = "header">
+        <p>Projeler</p>
+    </div>
+{% endblock header %}
+
+{% block body %}
+    <style>
+        .wizard_inner{
+            position: relative;
+            z-index: 0;
+        }
+
+        .form_personal{
+            opacity: 1;
+        }
+
+        .section1{
+            width: 70%;
+            position: relative;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(242, 242, 242);
+            padding: 50px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+            z-index: 0;
+        }
+
+        .form1{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgb(216, 216, 216);
+            padding: 10px;
+            margin-right: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        h3{
+            text-align:center;
+        }
+
+        hr{
+            width:75%;
+            margin-left: 85px;
+        }
+
+        .form-control.input-sm.mr-2{
+            width:35%;
+        }
+
+        .list-group-item a{
+            color:black;
+        }
+
+        .list-group-item:hover{
+            background:rgb(80,79,153)       }
+        
+    </style>
+
+    <div class="wizard_inner">
+        <div class="form_personal">
+            <div class="section1">
+                <div class="form1">
+                    <h3>Projeler</h3>
+                    <hr>
+                    <br>
+                    <ul class="list-group">
+                        <li class = "list-group-item"><a href="/cvbuilder">PC MAN - CV Builder</a></li>
+                        <li class = "list-group-item"><a href="/blog">PC MAN - Blog</a></li>
+                        <li class = "list-group-item"><a href="/todoapp">PC MAN - Todo App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock body %}

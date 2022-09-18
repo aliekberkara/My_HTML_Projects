@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>CV Builder - Hakkında</title>
+{% endblock title %}
+
+{% block navbar %}
+    {% include "includes/navbar1.html" %}
+{% endblock navbar %}
+
+{% block header %}
+    <style>
+        .header{
+            background: rgb(94, 10, 150);
+            width: 100%;
+            height: 25px;
+        }
+
+        .header p{
+            text-align: center;
+            margin-top: 8px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            user-select: none;
+        }
+    </style>
+
+    <div class = "header">
+        <p>CV Builder Hakkında</p>
+    </div>
+{% endblock header %}
+
+{% block body %}
+    <style>
+        .inner_header{
+            width: 70%;
+            overflow: auto;
+            height: 350px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: rgb(242, 242, 242);
+            padding: 50px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+            z-index: 0;
+        }
+
+        .about{
+            width: 100%;
+            height: 250px;
+            border: 1px solid rgb(216, 216, 216);
+            padding: 10px;
+        }
+
+        .about h3{
+            margin-left: 40%;
+            width: 200px;
+            color: rgb(0, 0, 0);
+            user-select: none;
+            font-size: 30px;
+        }
+
+        .about p.yazi{
+            margin-top: 8px;
+            margin-left: 10%;
+            font-size: 18px;
+            width: 80%;
+            color: black;
+            user-select: none;
+            background-color: rgb(242, 242, 242);
+        }
+
+        hr{
+            width:50%;
+            margin-left: 155px;
+        }
+    </style>
+
+    <div class="inner_header">
+        <div class="about">
+            <h3>CV Builder</h3>
+            <hr>
+            <br>
+            <p class="yazi">
+                CV Builder'a kayıt olup girişinizi yaparak CV'nizi oluşturmaya başlayabilirsiniz.
+            </p>
+        </div>
+        
+    </div>
+{% endblock body %}
