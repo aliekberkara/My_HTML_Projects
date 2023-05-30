@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./js/fontawesome-all.min.js"></script>
+    <title>Web App-2</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#scrollspy">
+    <header id="header">
+        <nav class="navbar navbar-expand-lg bg-success navbar-dark py-3 sticky-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><i class="fas fa-camera-retro"></i> App Name</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navmenu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-2 mt-1" id="scrollspy">
+                        <li class="nav-item"><a href="#hero" class="nav-link">To the top</a></li>
+                        <li class="nav-item"><a href="#description" class="nav-link">Description</a></li>
+                        <li class="nav-item"><a href="#trailer" class="nav-link">Trailer</a></li>
+                        <li class="nav-item"><a href="#showcase" class="nav-link">Showcase</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="py-5 text-center d-flex justify-content-center align-items-center text-white" id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h1 class="display-1 mt-5 text-success">APP NAME</h1>
+                        <h1 class="display-4">Lorem, ipsum dolor.</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="lead">Lorem ipsum dolor sit amet.</p>
+                        <p><strong>Download now on:</strong></p>
+                        <a href="#" class="btn btn-lg btn-success mb-3 mb-sm-0 me-sm-3"><i class="fab fa-app-store-ios"></i> App Store</a>
+                        <a href="#" class="btn btn-lg btn-success mb-3 mb-sm-0 me-sm-3"><i class="fab fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5" id="description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="display-3 mt-5 text-center">What is App Name?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum commodi adipisci modi. Nisi perferendis libero tempore delectus corrupti omnis debitis incidunt labore cumque. Illo explicabo pariatur alias laborum. Modi rerum, nobis debitis quo maiores nisi.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ex tempore necessitatibus, reprehenderit sint sapiente at perspiciatis fugit vitae iure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light text-center" id="trailer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="display-3 mt-5">App Name Trailer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, inventore.</p>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" title="Placeholder" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="showcase" class="py-5 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="display-3 mt-5">App Name in Action</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, unde!</p>
+                        <div id="slide" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#slide" data-bs-slide-to="1"  aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#slide" data-bs-slide-to="2"  aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#slide" data-bs-slide-to="3"  aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="5000">
+                                    <img src="img/1.png" alt="" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block text-white">
+                                        <h5>First Slide Label</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis distinctio possimus sit nemo similique?</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="img/2.png" alt="" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block text-white">
+                                        <h5>Second Slide Label</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis distinctio possimus sit nemo similique?</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="img/3.png" alt="" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block text-white">
+                                        <h5>Third Slide Label</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis distinctio possimus sit nemo similique?</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="img/4.png" alt="" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block text-white">
+                                        <h5>Forth Slide Label</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis distinctio possimus sit nemo similique?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center bg-light" id="features">
+            <div class="container">
+                <div class="row">
+                    <h3 class="display-3 mt-5 mb-3">Features</h3>
+                    <div class="col-md-3 mx-auto">
+                        <div class="card border-0">
+                            <i class="bi bi-brush-fill text-danger fa-2x"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Feature Heading</h5>
+                                <p class="card-text text-start mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nihil, facilis incidunt commodi debitis optio.</p>
+                                <a href="#" class="btn btn-danger ms-md-5 mt-3">Read More...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <div class="card border-0">
+                            <i class="bi bi-camera-video-fill text-danger fa-2x"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Feature Heading</h5>
+                                <p class="card-text text-start mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nihil, facilis incidunt commodi debitis optio.</p>
+                                <a href="#" class="btn btn-danger ms-md-5 mt-3">Read More...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <div class="card border-0">
+                            <i class="bi bi-instagram text-danger fa-2x"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Feature Heading</h5>
+                                <p class="card-text text-start mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nihil, facilis incidunt commodi debitis optio.</p>
+                                <a href="#" class="btn btn-danger ms-md-5 mt-3">Read More...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <div class="card border-0">
+                            <i class="bi bi-phone-fill text-danger fa-2x"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Feature Heading</h5>
+                                <p class="card-text text-start mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nihil, facilis incidunt commodi debitis optio.</p>
+                                <a href="#" class="btn btn-danger ms-md-5 mt-3">Read More...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="py-5 text-center">
+            <div class="container">
+                <div class="row">
+                    <h3 class="display-3 mt-5">Choose Your Plan</h3>
+                    <div class="col-md-4 mx-auto">
+                        <div class="card border-0 mt-3">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="display-6">Starter</h5>
+                                <p class="fs-4">Free</p>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+                                <li class="list-group-item"><i class="bi bi-brush-fill"></i> Item Description</li>
+                                <li class="list-group-item"><i class="bi bi-instagram"></i> Item Description</li>
+                            </ul>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-success">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mx-auto">
+                        <div class="card border-0 mt-3">
+                            <div class="card-header bg-warning text-white">
+                                <h5 class="display-6">Semi-Pro</h5>
+                                <p class="fs-4">$1.99 / month</p>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+                                <li class="list-group-item"><i class="bi bi-brush-fill"></i> Item Description</li>
+                                <li class="list-group-item"><i class="bi bi-instagram"></i> Item Description</li> 
+                                <li class="list-group-item"><i class="bi bi-gear-wide-connected"></i> Item Description</li>
+                            </ul>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-warning">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mx-auto">
+                        <div class="card border-0 mt-3">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="display-6">Pro</h5>
+                                <p class="fs-4">$4.99 / month</p>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+                                <li class="list-group-item"><i class="bi bi-brush-fill"></i> Item Description</li>
+                                <li class="list-group-item"><i class="bi bi-instagram"></i> Item Description</li> 
+                                <li class="list-group-item"><i class="bi bi-gear-wide-connected"></i> Item Description</li>
+                                <li class="list-group-item"><i class="bi bi-cloud-fill"></i> Item Description</li>
+                            </ul>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-info">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <h3 class="display-3 mt-5 text-center">Reviews</h3>
+                    <div class="col-md-3 mx-auto mt-3">
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p><i class="fas fa-quote-right text-danger"></i> 
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis id eum optio nobis eius similique aut doloremque beatae ipsam architecto. 
+                                    <i class="fas fa-quote-left text-danger"></i> </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Firstname Lastname <cite title="(September 01 2020 12.00)">(September 01 2020 12.00)</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 mx-auto mt-3">
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p><i class="fas fa-quote-right text-danger"></i> 
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis id eum optio nobis eius similique aut doloremque beatae ipsam architecto. 
+                                    <i class="fas fa-quote-left text-danger"></i> </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Firstname Lastname <cite title="(September 01 2020 12.00)">(September 01 2020 12.00)</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 mx-auto mt-3">
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p><i class="fas fa-quote-right text-danger"></i> 
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis id eum optio nobis eius similique aut doloremque beatae ipsam architecto. 
+                                    <i class="fas fa-quote-left text-danger"></i> </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Firstname Lastname <cite title="(September 01 2020 12.00)">(September 01 2020 12.00)</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 mx-auto mt-3">
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p><i class="fas fa-quote-right text-danger"></i> 
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis id eum optio nobis eius similique aut doloremque beatae ipsam architecto. 
+                                    <i class="fas fa-quote-left text-danger"></i> </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Firstname Lastname <cite title="(September 01 2020 12.00)">(September 01 2020 12.00)</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-bg-danger">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-8 mx-auto">
+                        <h3 class="display-3 mt-5">Newsletter</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, pariatur.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-6 mx-auto">
+                        <input type="text" class="form-control" placeholder="Firstname Lastname">
+                    </div>
+                    <div class="col-md-6 mx-auto mt-3 mt-md-0">
+                        <input type="email" class="form-control" placeholder="mail@example.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <form>
+                            <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input" name="check-test" id="check1"/>
+                                <label for="check1" class="form-check-label">I have read and accept the <a href="#" class="link-success">terms and conditions.</a></label>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="w-100 position-relative">
+                            <p class="top-50 start-0 position-absolute">You can unsubcribe from the mailing list at any time.</p>
+                            <button class="btn btn-dark top-50 end-0 position-absolute">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mx-auto">
+                        <p class="mt-5">Quick Links</p>
+                        <a href="#" class="link-success">Home</a>
+                        <br>
+                        <a href="#" class="link-success">What's New?</a>
+                        <br>
+                        <a href="#" class="link-success">Support</a>
+                        <br>
+                        <a href="#" class="link-success">My Account</a>
+                        <br>
+                        <a href="#" class="link-success">Cancel Subscription</a>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <p class="mt-5">Information</p>
+                        <a href="#" class="link-success">About us</a>
+                        <br>
+                        <a href="#" class="link-success">Jobs</a>
+                        <br>
+                        <a href="#" class="link-success">Press info</a>
+                        <br>
+                        <a href="#" class="link-success">Contact</a>
+                        <br>
+                        <a href="#" class="link-success">Partnership</a>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <p class="mt-5">Follow us</p>
+                        <a href="#" class="link-success"><i class="bi bi-facebook"></i> Facebook</a>
+                        <br>
+                        <a href="#" class="link-success"><i class="bi bi-instagram"></i> Instagram</a>
+                        <br>
+                        <a href="#" class="link-success"><i class="bi bi-twitter"></i> Twitter</a>
+                        <br>
+                        <a href="#" class="link-success"><i class="bi bi-youtube"></i> Youtube</a>
+                        <br>
+                        <a href="#" class="link-success"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <p class="mt-5">Our Location</p>
+                        <p class="fw-bold mb-0">App Name</p>
+                        <p>350 5th Avenue <br> New York, NY 10118 <br> <i class="bi bi-telephone-fill"></i><a href="#">(212) 736-3100</a> <br> <i class="bi bi-inbox-fill"></i><a href="#">info@appname.com</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <p>&copy; 2020 App Name Inc. All rights reserved. <a href="#" class="link-success">Terms of use and privacy policy.</a></p>
+                    </div>
+                    <div class="col-md-3 mx-auto">
+                        <div class="btn-group dropup">
+                            <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-translate"></i> Change Language
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">English</a></li>
+                              <li><a class="dropdown-item" href="#">Turkish</a></li>
+                              <li><a class="dropdown-item" href="#">Spanish</a></li>
+                              <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

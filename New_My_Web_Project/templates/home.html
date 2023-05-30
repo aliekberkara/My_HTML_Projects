@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{{ super() }}
+<h1>Hello {{name}}<br> You Are On The Home Page!</h1>
+
+{%if display%}
+<h2>This is being displayed!</h1>
+{%else%}
+<h2>This is not being displayed!</h1>
+{%endif%}
+
+{% for x in mylist %}
+<h3>{{x}}</h3>
+{% endfor %}
+
+{% for y in listofdictionaries %}
+<h4>{{y.name}}</h4>
+{% endfor %}
+
+<img src="{{url_for('static', filename='images/prettyprinted.png')}}">
+{% include "include_this.html" %}
+{% endblock %}
