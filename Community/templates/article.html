@@ -1,0 +1,279 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Siber Güvenlik</title>
+{% endblock title %}
+
+{% block body %}
+    <style>
+        .like-button.active i{
+            color: blue;
+        }
+
+        .comment-button.active i{
+            color: red;
+        }
+
+        .like-button i,
+        .comment-button i {
+            margin-right: 5px;
+        }
+    </style>
+
+
+    <section class="py-5 text-start d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <div class="row rounded-5 py-5 px-5 bg-light">
+                <div class="col-md-10 col-12 mb-5 mb-lg-0 mx-auto">
+                    <p class="display-6 pe-none fw-bolder text-body-secondary font-monospace text-break">Siber Güvenlik Alanında Çalışmaya Nasıl Başlayabilirim?</p>
+                    <hr class="line w-50">
+                    <p class="fs-6 pe-none fw-lighter text-body-secondary font-monospace">Yasin Sunullah Ardoğan · 6 min read · Haz 16, 2023</p>
+                    <hr class="line w-50">
+                    <div class="row w-100 d-flex">
+                        <div class="col-lg-3 fs-6 text-break fw-medium lh-base font-monospace text-body-secondary user-select-none">
+                            <span class="like-button"><i class="fas fa-thumbs-up"></i></span>
+                            <span id="likeCount" class="like-button">0</span>
+
+                            <a href="#comments" type="button" data-bs-toggle="offcanvas"  class="btn text-body-secondary"><span class="comment-button"><i class="fas fa-comment"></i></span><span id="commentCount" class="comment-button">2</span></a>
+
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="comments" aria-labelledby="commentTitle">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title display-6 pe-none fw-bolder text-body-secondary font-monospace text-break" id="commentTitle">Yorum Yazın</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <form>
+                                        <div class="form-floating overflow-hidden">
+                                            <textarea class="form-control" style="height: 200px;" placeholder="Mesajınız" id="message"></textarea>
+                                            <label for="message">Yorumunuz</label>
+                                        </div>
+                                        <br>
+                                        <div class="text-end">
+                                            <a href="/send" class="btn btn-secondary">Gönder</a>
+                                        </div>
+                                    </form>
+                                    <hr class="line">
+                                    <div>
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">ELİF</p>
+                                                    <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Gayet güzel bir anlatım olmuş. Emeğinize sağlık.</p>
+                                                    <br>
+                                                    <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">15 Gün Önce</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">SAMET</p>
+                                                    <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Bu yazı ile gerçekten siber güvenliğe nasıl başlamam gerektiğini öğrendim. Teşekkürler...</p>
+                                                    <br>
+                                                    <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">2 Saat Önce</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="line w-50">
+                    <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">
+                        Bu yazıyı yazma nedenim sektöre yeni başlamak isteyen değerli bağlantılarıma yol göstermektir.
+                        <br>
+                        <br>
+                        İlk olarak ağ ve işletim sistemi temelleri ve bir programlama dilini öğrenmenizi (başlangıç için Python) öneririm. Bu konuda aşağıdaki ücretsiz kaynaklardan yararlanabilirsiniz:
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/isletim-sistemlerine-giris-17624
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/sifirdan-ileri-seviye-python-programlama-5877
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/windows-isletim-sistemleri-guevenligi-20827
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/siber-guevenlikte-linux-isletim-sistemleri-10869
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/temel-kriptografi-20653
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/bash-programlama-dili-883
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/temel-ag-teknolojileri-14711
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/ileri-ag-teknolojileri-18150
+                        <br><br>
+                        TryHackMe platformundan hesap açarak başlangıç seviyesinde aşağıdaki eğitim yollarını takip edebilirsiniz:
+                        <br><br>
+                        Introduction to Cyber Security
+                        <br><br>
+                        Complete Beginner
+                        <br><br>
+                        Pre Security
+                        <br><br>
+                        Temel siber güvenlik eğitimi sonrasında şu sorulara cevap verebiliyor muyuz?
+                        <br><br>
+                        -OSI katmanları ile ilgili sorulara cevap verebiliyor muyum? Örneğin tarayıcıdan google.com alan adına gitmek istediğimizde Wireshark ile bir inceleme yapmanızı öneririm.
+                        <br><br>
+                        Siber Güvenlik Analisti analisti için kariyerini devam ettirmek isteyen bağlantılarım aşağıdaki kaynaklardan yararlanabilirler:
+                        <br><br>
+                        https://kaleileriteknoloji.medium.com/
+                        <br><br>
+                        https://www.youtube.com/watch?v=bvj-PvDkd3s&list=PLfaZ5IiaBXLWBG2iG7W7-Zp_RLOLd1ts2
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/siber-tehdit-istihbarati-ve-tehdit-avciligi-21060
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/siber-olay-tespit-ve-muedahale-15405
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/siber-guevenlik-analisti-egitimi-5020
+                        <br><br>
+                        Siber Güvenlik Analisti için TryHackMe platformundan aşağıdaki eğitim yolunu da takip edebilirsiniz:
+                        <br><br>
+                        Cyber Defense
+                        <br><br>
+                        Siber Güvenlik Analisti için takip edilebilecek diğer CTF ortamları:
+                        <br><br>
+                        https://cyberdefenders.org/blueteam-ctf-challenges/
+                        <br><br>
+                        https://letsdefend.io/
+                        <br><br>
+                        https://www.malware-traffic-analysis.net/training-exercises.html
+                        <br><br>
+                        https://crackmes.one/
+                        <br><br>
+                        https://challenges.re/
+                        <br><br>
+                        https://www.root-me.org/
+                        <br><br>
+                        https://www.hackthebox.com/ (challenge)
+                        <br>br
+                        https://ctftime.org/
+                        <br><br>
+                        Sızma Testi Uzmanı için kariyerini devam ettirmek isteyen bağlantılarım aşağıdaki ücretsiz kaynaklardan yararlanabilirler:
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/sizma-testine-giris-10600
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/uygulamalarla-sql-oegreniyorum-8249
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/uygulamali-sizma-testi-egitimi-16025
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/siber-guevenlik-icin-python-egitimi-9220
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/veritabani-saldirilari-ve-veritabani-guevenligi-6569
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/enduestriyel-kontrol-sistemlerinin-siber-guevenligi-20792
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/kablosuz-ag-sizma-teknikleri-15815
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/web-uygulama-guevenligi-ve-web-sizma-tekniklerine-giris-10587
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/mobil-guevenlik-ve-sizma-teknikleri-9355
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/kablosuz-ag-guevenligi-90
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/bellek-tasma-acikliklari-ve-exploit-gelistirme-15354
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/guevenlik-testi-egitimi-4608
+                        <br><br>
+                        Sızma Testi Uzmanı için TryHackMe platformundan aşağıdaki eğitim yollarını da takip edebilirsiniz:
+                        <br><br>
+                        Web Fundamentals
+                        <br><br>
+                        CompTIA Pentest+
+                        <br><br>
+                        Jr Penetration Tester
+                        <br><br>
+                        Offensive Pentesting
+                        <br><br>
+                        Sızma Testi için takip edilebilecek diğer CTF ortamları:
+                        <br><br>
+                        https://www.vulnhub.com/
+                        <br><br>
+                        https://www.hackthebox.com/
+                        <br><br>
+                        https://overthewire.org/wargames/
+                        <br><br>
+                        https://pentesterlab.com/
+                        <br><br>
+                        https://www.offensive-security.com/labs/individual/
+                        <br><br>
+                        https://www.hacker101.com/
+                        <br><br>
+                        https://www.root-me.org/
+                        <br><br>
+                        https://ctftime.org/
+                        <br><br>
+                        Yukarıdaki konulara ek olarak aşağıdaki konu başlıklarında da ilerlenilebilir:
+                        <br><br>
+                        Bulut Bilişim
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/amazon-web-servisler-aws-ile-bulut-bilisim-20027
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/microsoft-azure-ile-bulut-bilisim-12854
+                        <br><br>
+                        IOT
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/nesnelerin-interneti-iot-ve-guevenligi-10625
+                        <br><br>
+                        BGYS
+                        <br><br>
+                        https://www.btkakademi.gov.tr/portal/course/bilgi-guevenligi-yoenetim-sistemi-9633
+                        <br><br>
+                        İş görüşmesi sürecinde adaylar özgeçmişlerine tamamladıkları eğitimleri, CTF platformlarındaki kullanıcı adı, github hesapları vb. bilgileri yazmaları iyi olacaktır. Başvurulan pozisyona göre özgeçmiş hazırlanmalıdır. İş ilanına ilişkin genel nitelikler göz gezdirildikten sonra bu konuda tekrar yapılarak iş görüşmelerine girilmelidir. (Örneğin Wireshark veya trafik analizi geçiyorsa Wireshark ile trafik analizi yapılmalı, 3'lü el sıkışma gösterilebilmelidir. Örneğin sızma testi uzmanı pozisyonu için sırayla belirtilen sorulara cevap verilebilmelidir: Sızma testi metodolojileri nelerdir? En fazla istismar edilen zafiyetler nelerdir? Sızma testi için herkese açık rapor formatları incelenmelidir.)
+                        <br><br>
+                        İş başvurusunda bulunacak değerli bağlantılarıma başarılar dilerim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
+
+{% block script %}
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    <script>
+        var likeButton = document.querySelector(".like-button");
+        var commentButton = document.querySelector(".comment-button");
+        var likeCount = document.getElementById("likeCount");
+        var commentCount = document.getElementById("commentCount");
+
+        var like = 0;
+        var comment = 2;
+
+        likeButton.addEventListener("click", function() {
+            if (likeButton.classList.contains("active")) {
+                like--;
+                likeButton.classList.remove("active");
+            } else {
+                like++;
+                likeButton.classList.add("active");
+                if(commentButton.classList.contains("active")){
+                    comment--;
+                    commentButton.classList.remove("active");
+                }
+            }
+            commentCount.textContent = comment;
+            likeCount.textContent = like;
+        });
+
+        commentButton.addEventListener("click", function() {
+            if (commentButton.classList.contains("active")) {
+                comment--;
+                commentButton.classList.remove("active");
+            } else {
+                comment++;
+                commentButton.classList.add("active");
+                if(likeButton.classList.contains("active")){
+                    like--;
+                    likeButton.classList.remove("active");
+                }
+            }
+            likeCount.textContent = like;
+            commentCount.textContent = comment;
+        });
+    </script>
+{% endblock script %}

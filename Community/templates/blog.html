@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Siber - Blog</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <p class="display-5 pt-5 pe-none fw-bolder text-body-secondary font-monospace">Blog</p>
+            <div class="row py-5">
+                
+                <div class="col-lg-8 col-12 rounded-5 py-5 bg-light mb-5 mb-lg-0 mx-auto px-5">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <form role="search" class="d-flex justify-content-between pb-5">
+                                <input class="form-control me-2" maxlength="64" type="search" placeholder="Ara..." aria-label="Ara...">
+                                <button class="btn btn-primary" type="submit">Ara...</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-12 text-start">
+                            <p class="fs-6 pe-none fw-bold text-body-secondary font-monospace">Yasin Sunullah Ardoğan · Haz 16</p>
+                            <div class="position-relative">
+                                <p class="fs-4 pe-none fw-bolder text-body-secondary font-monospace">
+                                    Siber Güvenlik Alanında Çalışmaya Nasıl Başlayabilirim?
+                                </p>
+                                <p class="fs-6 pe-none fw-normal text-body-secondary font-monospace">
+                                    Bu yazıyı yazma nedenim sektöre yeni başlamak isteyen değerli bağlantılarıma yol göstermektir. İlk olarak ağ ve işletim sistemi temelleri ve bir programlama dilini öğrenmenizi (başlangıç için Python) öneririm. Bu konuda aşağıdaki ücretsiz kaynaklardan yararlanabilirsiniz...
+                                </p>
+                                <br>
+                                <a class="fs-6 link-underline link-underline-opacity-0 fw-lighter text-body-secondary font-monospace stretched-link" href="article-1">6 min read </a>
+                            </div>
+                            <br><br>
+                        </div>
+                        <hr class="line">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+{% endblock body %}

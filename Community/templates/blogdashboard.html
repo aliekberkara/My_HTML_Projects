@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Blog - Kontrol Paneli</title>
+{% endblock title %}
+
+{% block navbar %}
+    {% include "includes/navbar2.html" %}
+{% endblock navbar %}
+
+{% block header %}
+    <style>
+        .header{
+            background: rgb(94, 10, 150);
+            width: 100%;
+            height: 25px;
+        }
+
+        .header p{
+            text-align: center;
+            margin-top: 8px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            user-select: none;
+        }
+    </style>
+
+    <div class = "header">
+        <p>Kontrol Paneli</p>
+    </div>
+{% endblock header %}
+
+{% block body %}
+    <style>
+        .wizard_inner{
+            position: relative;
+            z-index: 0;
+        }
+
+        .form_personal{
+            opacity: 1;
+        }
+
+        .section1{
+            width: 70%;
+            position: relative;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(242, 242, 242);
+            padding: 50px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+            z-index: 0;
+        }
+
+        .form1{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgb(216, 216, 216);
+            padding: 10px;
+            margin-right: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        h3{
+            text-align:center;
+        }
+
+        hr{
+            width:75%;
+            margin-left: 85px;
+        }
+
+        small{
+            margin-left: 85px;
+            font-size: 15px;
+        }
+    </style>
+
+    <div class="wizard_inner">
+        <div class="form_personal">
+            <div class="section1">
+                <div class="form1">
+                    <h3>Kontrol Paneli</h3>
+                    <small>Hoşgeldin, {{session["username"]}}</small>
+                    <hr>
+
+                    <div class = "d-flex justify-content-center">
+                            <a href="/addarticle" class="btn btn-danger">Makale Ekle</a>
+                    </div>
+                    <br>
+                    {% if articles %}
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">Yazar</th>
+                                    <th scope="col">Tarih</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for article in articles %}
+                                    <tr>
+                                        <th scope="row">{{article.id}}</th>
+                                        <td><a href="/article-{{article.id}}">{{article.title}}</a></td>
+                                        <td>{{article.author}}</td>
+                                        <td>{{article.created_date}}</td>
+                                        <td><a href="/update-{{article.id}}" class = "btn btn-outline-danger">Güncelle</a></td>
+                                        <td><a href="/blogdelete-{{article.id}}" class = "btn btn-outline-danger">Sil</a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div class = "alert alert-danger">Henüz bir makaleniz bulunmuyor...</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock body %}

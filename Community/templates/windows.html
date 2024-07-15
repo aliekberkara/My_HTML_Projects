@@ -1,0 +1,281 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>NEU Siber - İşletim Sistemleri (Windows)</title>
+{% endblock title %}
+
+{% block body %}
+<style>
+    .like-button.active i{
+        color: blue;
+    }
+
+    .dislike-button.active i{
+        color: red;
+    }
+
+    .like-button i,
+    .dislike-button i {
+        margin-right: 5px;
+    }
+</style>
+<section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+    <div class="container">
+        <div class="row bg-light rounded-5 py-5 px-3">
+            <div class="col-12">
+                <div class="w-100 p-0">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="./static/image/6.svg" alt="Windows" class="img-fluid rounded-5 px-2">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="fs-4 pt-4 pe-none fw-bolder text-body-secondary font-monospace">İşletim Sistemleri (Windows)</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="https://www.linkedin.com/in/kasımramazan-düzgün/" class="fs-5 fw-bolder link-underline link-underline-opacity-0 text-body-secondary font-monospace">- Kasım Ramazan Düzgün -</a>
+                                <br>
+                            </div>
+                            <div class="row w-100 pt-4 d-flex">
+                                <div class="col-lg-3 fs-6 text-break fw-medium lh-base font-monospace text-body-secondary user-select-none">
+                                    <span class="like-button"><i class="fas fa-thumbs-up"></i></span>
+                                    <span id="likeCount" class="like-button">12</span>
+                                    <span class="dislike-button"><i class="fas fa-thumbs-down"></i></span>
+                                    <span id="dislikeCount" class="dislike-button">3</span>
+                                </div>
+                                <div class="col-lg-5 py-1">
+                                    <p class="fs-6 text-break fw-medium lh-base font-monospace text-body-secondary pe-none">
+                                        <i class="bi bi-people-fill"></i> 20 Katılımcı
+                                    </p>
+                                </div>
+                                <div class="col-lg-4 py-1">
+                                    <p class="fs-6 text-break fw-medium lh-base font-monospace text-body-secondary pe-none">
+                                        <i class="bi bi-clock"></i> 2 sa 05 dk
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row w-100 px-5 d-flex">
+                                <div class="col-12">
+                                    <a class="btn btn-primary w-100" href="/windows/windows_video"><i class="bi bi-play-circle"></i> Eğitime Katıl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-12 text-start">
+                            <div class="btn-group font-monospace" role="group">
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#definition" aria-expanded="false" aria-controls="definition">
+                                    Açıklama
+                                </button> 
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#comments" aria-expanded="false" aria-controls="comments">
+                                    Yorumlar(3)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-start px-5 accordion-collapse collapse show" data-bs-parent="accordion" id="definition">
+                            <br>
+                            <hr class="line">
+                            <br>
+                            <p class="fs-5 fw-medium text-body-secondary font-monospace">Açıklama</p>
+                            <div class="accordion" id="purpose">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            Eğitim Amacı
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                Bu eğitimin amacı , öğrenenlerin Windows İşletim Sistemleri Güvenliği ve Uygulama Güvenliği ile ilgili temel bilgi düzeyine erişmesidir.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            Eğitim Özeti
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                Bu eğitimde Windows İşletim sistemini güçlendirerek ve saldırı yüzeyini azaltıp güvenlik sorunlarının önlenmesine nasıl yardımcı olunacağı öğretilecektir. Aynı zamanda kullanıcı hesaplarını, parolaları, hizmetleri, dosya sistemini ve DNS ve IIS gibi ortak ağ hizmetlerini sağlamlaştırarak bir Windows sistemini kilitlemek için en yaygın güvenlik uygulamalarının nasıl izleneceği öğretilecektir.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                            Hedef Kitle
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                <li class="list-item">
+                                                    <p>Bilgisayar, Adli Bilişim ve yazılım mühendisliğine yeni başlayanlar</p>
+                                                </li>
+                                                <li class="list-item">
+                                                    <p>Windows sistemler hakkında bilgi sahibi olmak isteyenler</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                            Temel Bilgi ve Beceri Gereksinimleri
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                    <li class="list-item">
+                                                        <p>Temel Windows işletim sistemi yönetim bilgisi</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Windows işletim sistemi dosya yapısı</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Windows Active Directory mantığı</p>
+                                                    </li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                            Kazanımlar
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                    <li class="list-item">
+                                                        <p>Windows Server dosya sistemlerinin güvenliğini sağlamak için yaygın teknikleri öğrenir ve bu teknikleri kullanarak Windows işletim sistemlerinde güvenliği sağlar.</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Windows sunucusunda dictionary, brute force saldırılarını önlemek için bir parola ilkesi uygulayabilir.</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Windows DNS sunucularını sıkılaştırmak için teknikleri kullanabilir.</p>
+                                                    </li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-start px-5 accordion-collapse collapse" data-bs-parent="accordion" id="comments">
+                            <br>
+                            <hr class="line">
+                            <br>
+                            <p class="fs-5 fw-medium text-body-secondary font-monospace">3 Yorum Yapıldı</p>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">ALİ</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Hocam daha iyisini yapabilirsiniz.Anlatacak çok şey varken  iki saatte sohbet havasında sıkıcı bir sunumla böyle güzel bir konuyu geçmek olmamıs.</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">15 Gün Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">ESİN</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Malesef eğitmen arkadaş öğretme konusunda yeterli değil. Bilgili olabilir ancak aktarma sorunu bariz. Devam edemedim...</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">1 Ay Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">AHMET</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Eğitmen çok açıklayıcı, değerli bilgiler verdi. Bu eğitim için teşekkürler. Hocamız çok yetkin ve bilgili , aktarımlar gayet iyiydi.</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">2 Ay Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block script %}
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    <script>
+        var likeButton = document.querySelector(".like-button");
+        var dislikeButton = document.querySelector(".dislike-button");
+        var likeCount = document.getElementById("likeCount");
+        var dislikeCount = document.getElementById("dislikeCount");
+
+        var like = 12;
+        var dislike = 3;
+
+        likeButton.addEventListener("click", function() {
+            if (likeButton.classList.contains("active")) {
+                like--;
+                likeButton.classList.remove("active");
+            } else {
+                like++;
+                likeButton.classList.add("active");
+                if(dislikeButton.classList.contains("active")){
+                    dislike--;
+                    dislikeButton.classList.remove("active");
+                }
+            }
+            dislikeCount.textContent = dislike;
+            likeCount.textContent = like;
+        });
+
+        dislikeButton.addEventListener("click", function() {
+            if (dislikeButton.classList.contains("active")) {
+                dislike--;
+                dislikeButton.classList.remove("active");
+            } else {
+                dislike++;
+                dislikeButton.classList.add("active");
+                if(likeButton.classList.contains("active")){
+                    like--;
+                    likeButton.classList.remove("active");
+                }
+            }
+            likeCount.textContent = like;
+            dislikeCount.textContent = dislike;
+        });
+    </script>
+{% endblock script %}

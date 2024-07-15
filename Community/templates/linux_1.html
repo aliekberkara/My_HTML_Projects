@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>NEU Siber - Linux-1</title>
+{% endblock title %}
+
+{% block body %}
+<style>
+    .like-button.active i{
+        color: blue;
+    }
+
+    .dislike-button.active i{
+        color: red;
+    }
+
+    .like-button i,
+    .dislike-button i {
+        margin-right: 5px;
+    }
+</style>
+<section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+    <div class="container">
+        <div class="row bg-light rounded-5 py-5 px-3">
+            <div class="col-12">
+                <div class="w-100 p-0">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="./static/image/7.svg" alt="Linux-1" class="img-fluid rounded-5 px-2">
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <p class="fs-4 pt-4 pe-none fw-bolder text-body-secondary font-monospace">İşletim Sistemleri (Linux-1)</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="https://www.linkedin.com/in/kasımramazan-düzgün/" class="fs-5 fw-bolder link-underline link-underline-opacity-0 text-body-secondary font-monospace">- Kasım Ramazan Düzgün -</a>
+                                <br>
+                            </div>
+                            <div class="row w-100 pt-4 d-flex">
+                                <div class="col-lg-3 fs-6 text-break fw-medium lh-base font-monospace text-body-secondary user-select-none">
+                                    <span class="like-button"><i class="fas fa-thumbs-up"></i></span>
+                                    <span id="likeCount" class="like-button">0</span>
+                                    <span class="dislike-button"><i class="fas fa-thumbs-down"></i></span>
+                                    <span id="dislikeCount" class="dislike-button">0</span>
+                                </div>
+                                <div class="col-lg-5 py-1">
+                                    <p class="fs-6 text-break fw-medium lh-base font-monospace text-body-secondary pe-none">
+                                        <i class="bi bi-people-fill"></i> 23 Katılımcı
+                                    </p>
+                                </div>
+                                <div class="col-lg-4 py-1">
+                                    <p class="fs-6 text-break fw-medium lh-base font-monospace text-body-secondary pe-none">
+                                        <i class="bi bi-clock"></i> 1 sa 21 dk
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row w-100 px-5 d-flex">
+                                <div class="col-12">
+                                    <a class="btn btn-primary w-100" href="/linux-1/linux_video1"><i class="bi bi-play-circle"></i> Eğitime Katıl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-12 text-start">
+                            <div class="btn-group font-monospace" role="group">
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#definition" aria-expanded="false" aria-controls="definition">
+                                    Açıklama
+                                </button> 
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#comments" aria-expanded="false" aria-controls="comments">
+                                    Yorumlar(3)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-start px-5 accordion-collapse collapse show" data-bs-parent="accordion" id="definition">
+                            <br>
+                            <hr class="line">
+                            <br>
+                            <p class="fs-5 fw-medium text-body-secondary font-monospace">Açıklama</p>
+                            <div class="accordion" id="purpose">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            Eğitim Amacı
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                Bu eğitimde, açık kaynak kodlu işletim sistemi olan Linux üzerinde, uygulamalar aracılığıyla güvenlik ve kabuk programlamaya dair sağlam temellerin atılması amaçlanmıştır.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            Eğitim Özeti
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                Hesap yönetimi, Dosya yönetimi, Şifreleme işlemleri, Erişim denetimi başlıkları ele alınmaktadır.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                            Hedef Kitle
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                <li class="list-item">
+                                                    <p>Linux ortamını daha iyi tanımak isteyenler,</p>
+                                                </li>
+                                                <li class="list-item">
+                                                    <p>Linux sistem işletiminde temel atmak isteyenler,</p>
+                                                </li>
+                                                <li class="list-item">
+                                                    <p>Linux güvenliğini sağlama ve atlatma yöntemlerini merak edenler.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                            Temel Bilgi ve Beceri Gereksinimleri
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                    <li class="list-item">
+                                                        <p>Temel Linux komutları ve bilgisi</p>
+                                                    </li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bolder text-body-secondary font-monospace" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                            Kazanımlar
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p class="px-3 fs-6 fw-medium text-body-secondary font-monospace">
+                                                <ul class="list-group fs-6 fw-medium text-body-secondary font-monospace px-3">
+                                                    <li class="list-item">
+                                                        <p>Linux sunucularda sıkılaştırma yeteneğini geliştirebilir.</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Linux ortamında hangi servislerin kimleri kullanacağını daha net tanımlayabilir.</p>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <p>Linux ortamında şifreleme algoritmaların yönetebilir.</p>
+                                                    </li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-start px-5 accordion-collapse collapse" data-bs-parent="accordion" id="comments">
+                            <br>
+                            <hr class="line">
+                            <br>
+                            <p class="fs-5 fw-medium text-body-secondary font-monospace">3 Yorum Yapıldı</p>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">YASİN</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">hocam linux 2.videosu gelsin</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">1 Gün Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">ELİF</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Gayet güzel bir anlatım olmuş. Emeğinize sağlık.</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">15 Gün Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <table class="table table-light table-borderless">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <p class="px-3 fs-5 fw-bolder text-break text-body-secondary font-monospace">ZEYNEP</p>
+                                            <p class="m-0 px-3 fs-6 fw-bold text-break text-body-secondary font-monospace">Temiz, sade ve güzel bir anlatım olmuş, ellerinize sağlık</p>
+                                            <br>
+                                            <p class="m-0 px-3 fs-6 fw-lighter text-break text-body-secondary font-monospace">5 Ay Önce</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            <p class="fs-5 fw-medium text-body-secondary font-monospace">Yorum Yazın</p>
+                            <div class="form-floating fs-6 fw-normal text-body-secondary font-monospace">
+                                <textarea class="form-control" placeholder="Yorumunuzu Yazın." id="comment" style="height: 200px"></textarea>
+                                <label for="comment">Yorumunuzu Yazın...</label>
+                            </div>
+                            <br>
+                            <a href="/send" class="btn btn-primary">Yorum Yap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block script %}
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    <script>
+        var likeButton = document.querySelector(".like-button");
+        var dislikeButton = document.querySelector(".dislike-button");
+        var likeCount = document.getElementById("likeCount");
+        var dislikeCount = document.getElementById("dislikeCount");
+
+        var like = 0;
+        var dislike = 0;
+
+        likeButton.addEventListener("click", function() {
+            if (likeButton.classList.contains("active")) {
+                like--;
+                likeButton.classList.remove("active");
+            } else {
+                like++;
+                likeButton.classList.add("active");
+                if(dislikeButton.classList.contains("active")){
+                    dislike--;
+                    dislikeButton.classList.remove("active");
+                }
+            }
+            dislikeCount.textContent = dislike;
+            likeCount.textContent = like;
+        });
+
+        dislikeButton.addEventListener("click", function() {
+            if (dislikeButton.classList.contains("active")) {
+                dislike--;
+                dislikeButton.classList.remove("active");
+            } else {
+                dislike++;
+                dislikeButton.classList.add("active");
+                if(likeButton.classList.contains("active")){
+                    like--;
+                    likeButton.classList.remove("active");
+                }
+            }
+            likeCount.textContent = like;
+            dislikeCount.textContent = dislike;
+        });
+    </script>
+{% endblock script %}

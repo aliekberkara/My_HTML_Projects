@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Siber - Kayıt Ol</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p class="display-5 pt-5 pe-none fw-bolder text-body-secondary font-monospace">Kayıt Ol</p>
+                </div>
+                <div class=" py-5 mt-5 bg-light rounded-5 col-md-8 mx-auto">
+                    <form method="post">
+                        <center>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace user-select-none">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Adı Soyadı">
+                                <label for="name">Adı Soyadı</label>
+                            </div>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace user-select-none">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="E-posta Adresi">
+                                <label for="email">E-posta Adresi</label>
+                            </div>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace user-select-none">
+                                <input type="username" name="username" class="form-control" id="username" placeholder="Kullanıcı Adı">
+                                <label for="username">Kullanıcı Adı</label>
+                            </div>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace user-select-none">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Parola">
+                                <label for="password">Parola</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg font-monospace">Kayıt Ol</button>
+                        </center> 
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

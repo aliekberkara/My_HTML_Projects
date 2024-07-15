@@ -1,0 +1,474 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Siber - Eğitimler</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5 d-none d-lg-flex">
+        <div class="container">
+            <p class="display-5 py-5 pe-none fw-bolder text-body-secondary font-monospace">Eğitimlerimiz</p>
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Tüm Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/5.svg">
+                                            <div class="card-body">
+                                                <a href="/network" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Ağ Temelleri</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/6.svg">
+                                            <div class="card-body">
+                                                <a href="/windows" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Windows)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/7.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-1" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-1)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/9.svg">
+                                            <div class="card-body">
+                                                <a href="/nmap" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Nmap Kullanımı</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark mt-5 d-lg-none">
+        <div class="container">
+            <p class="display-5 py-5 pe-none fw-bolder text-body-secondary font-monospace">Eğitimlerimiz</p>
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Tüm Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings1" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings1" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/5.svg">
+                                            <div class="card-body">
+                                                <a href="/network" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Ağ Temelleri</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/6.svg">
+                                            <div class="card-body">
+                                                <a href="/windows" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Windows)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/7.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-1" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-1)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/9.svg">
+                                            <div class="card-body">
+                                                <a href="/nmap" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Nmap Kullanımı</h4></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark mt-5 d-none d-lg-flex">
+        <div class="container">
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Devam Ettiğim Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings2" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings2" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/5.svg">
+                                            <div class="card-body">
+                                                <a href="/network" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Ağ Temelleri</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 25%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/7.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-1" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-1)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 15%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark mt-5 d-lg-none">
+        <div class="container">
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Devam Ettiğim Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings3" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings3" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings3" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/5.svg">
+                                            <div class="card-body">
+                                                <a href="/network" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Ağ Temelleri</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 25%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/7.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-1" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-1)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 15%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="progress" role="progressbar" aria-label="Secondary example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-primary" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark mt-5 d-none d-lg-flex">
+        <div class="container">
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Popüler Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings4" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings4" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings4" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/6.svg">
+                                            <div class="card-body">
+                                                <a href="/windows" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri(Windows)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 12</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 20</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 22</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 38</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/9.svg">
+                                            <div class="card-body">
+                                                <a href="/nmap" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Nmap Kullanımı</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 15</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 25</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark mt-5 d-lg-none">
+        <div class="container">
+            <div class="row bg-light rounded-5 py-5 px-3">
+                <div class="col-6 text-start">
+                    <p class="fs-5 pe-none fw-bolder text-body-secondary font-monospace">Popüler Eğitimler</p>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-secondary mb-3 mr-1 rounded-circle" type="button" data-bs-target="#trainings5" data-bs-slide="prev">
+                        <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-secondary mb-3 rounded-circle" type="button" data-bs-target="#trainings5" data-bs-slide="next">
+                        <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <div id="trainings5" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/6.svg">
+                                            <div class="card-body">
+                                                <a href="/windows" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Windows)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 12</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 20</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/8.svg">
+                                            <div class="card-body">
+                                                <a href="/linux-2" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">İşletim Sistemleri (Linux-2)</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 12</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 20</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12 mb-3">
+                                        <div class="card rounded-5">
+                                            <img class="img-fluid rounded-top-5" alt="100%x280" src="./static/image/9.svg">
+                                            <div class="card-body">
+                                                <a href="/nmap" class="stretched-link link-offset-2 link-underline link-underline-opacity-0"><h4 class="card-title font-monospace text-body-secondary fs-4 fw-bold user-select-none">Nmap Kullanımı</h4></a>
+                                            </div>
+                                            <div class="card-footer rounded-bottom-5">
+                                                <div class="row">
+                                                    <div class="col-6 text-start">
+                                                        <a href="/like" class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-heart"></i> 12</a>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <a class="text-dark link-offset-2 link-underline link-underline-opacity-0 user-select-none" style="z-index: 2; position: relative;"><i class="bi bi-people"></i> 20</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+{% endblock body %}

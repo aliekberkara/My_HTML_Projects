@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Siber - Giriş Yap</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p class="display-5 pt-5 pe-none fw-bolder text-body-secondary font-monospace">Giriş Yap</p>
+                </div>
+                <div class=" py-5 mt-5 bg-light rounded-5 col-md-8 mx-auto">
+                    <form method="post">
+                        <center>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                                <label for="email">E-posta Adresi</label>
+                            </div>
+                            <div class="form-floating mb-3 w-75 text-body-secondary font-monospace">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                                <label for="password">Parola</label>
+                            </div>
+                            <p class="fs-6 fw-medium text-body-secondary font-monospace mb-3">Hesabınız yoksa <a href="/register" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">buradan</a> kaydolabilirsiniz.</p>
+                            <button type="submit" class="btn btn-primary btn-lg font-monospace">Giriş Yap</button>
+                        </center> 
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

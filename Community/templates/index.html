@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Siber - Anasayfa</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p class="display-5 pt-5 pe-none fw-bolder text-body-secondary font-monospace">NEU Siber Güvenlik Kulübü'ne Hoş Geldiniz...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center d-flex justify-content-center align-items-center text-dark">
+        <div class="container">
+            <div class="row bg-light rounded-5 py-5">
+                <div class="col-md-8 mx-auto">
+                    <div id="card" class="carousel rounded-5 carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#card" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#card" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#card" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#card" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="./static/image/1.gif" class="d-block w-100" alt="...">
+                                <a href="/trainings" class="stretched-link"></a>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="./static/image/2.gif" class="d-block w-100" alt="...">
+                                <a href="/joinus" class="stretched-link"></a>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="./static/image/3.gif" class="d-block w-100" alt="...">
+                                <a href="/blog" class="stretched-link"></a>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="./static/image/4.gif" class="d-block w-100" alt="...">
+                                <a href="/resume" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#card" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#card" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <div class="row bg-light rounded-5">
+                <div class="col-md-8 pb-5 mx-auto">
+                    <p class="pt-5 fs-4 text-break fw-medium lh-base font-monospace text-body-secondary pe-none">Necmettin Erbakan Üniversitesi Siber Güvenlik Kulübü, Ekim 2022'de Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği Bölümü'nde kurulmuş olup hacker etiğini ve kültürünü benimseyerek bilgi güvenliği farkındalığı oluşturmayı, üretmeyi ve bilgisini paylaşmayı hedeflemektedir.</p>
+                    <a href="/about" class="btn btn-outline-secondary btn-lg">Biz Kimiz?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 text-dark mt-5">
+        <div class="container">
+            <div class="row bg-light rounded-5">
+                <div class="col-md-4 mx-auto py-3">
+                    <p class="fw-bold pe-none text-body-secondary py-2 fs-4">Duyurular</p>
+                    <p class="fw-lighter pe-none text-body-secondary pt-2 mb-2 fs-6">Eki 5, 2022</p>
+                    <a href="/news/tanisma"  class="fw-medium link-offset-2 link-underline link-underline-opacity-0 link-primary fs-3">NEU Siber Tanışma Toplantısı</a>
+                    <p class="fw-lighter pe-none text-body-secondary pt-2 mb-2 mt-4 fs-6">Ara 1, 2022</p>
+                    <a href="/news/sgh22"  class="fw-medium link-offset-2 link-underline link-underline-opacity-0 link-primary fs-3">Siber Güvenlik Haftası 2022</a>
+                </div>
+                <div class="col-md-4 mx-auto py-3">
+                    <p class="fw-bold pe-none text-body-secondary py-2 fs-4">HackArt</p>
+                    <p class="fw-lighter pe-none text-body-secondary pt-2 mb-2 fs-6">Oca 10, 2023</p>
+                    <a href="/blog/article-1"  class="fw-medium link-offset-2 link-underline link-underline-opacity-0 link-primary fs-3">SQL Injection Nedir?</a>
+                    <p class="fw-lighter pe-none text-body-secondary pt-2 mt-4 mb-2 fs-6">Mar 20, 2023</p>
+                    <a href="/blog/article-2"  class="fw-medium link-offset-2 link-underline link-underline-opacity-0 link-primary fs-3">Zararlı Yazılım (Malware) Nedir?</a>
+                    <p class="fw-lighter pe-none text-body-secondary pt-2 mt-4 mb-2 fs-6">Haz 13, 2023</p>
+                    <a href="/blog/article-3"  class="fw-medium link-offset-2 link-underline link-underline-opacity-0 link-primary fs-3">Proje Sunumu Nasıl Yapılır?</a>
+                </div>
+                <div class="text-center">
+                    <p class="pt-5 fs-6 text-break fw-bold lh-base font-monospace text-body-secondary pe-none">Yayınlanan yazıların tamamına ulaşmak için tıklayın!</p>
+                    <a href="/blog" class="btn btn-outline-secondary">HackArt</a>
+                    <p class="pt-5 fs-6 text-break fw-bold lh-base font-monospace text-body-secondary pe-none">Etkinliklerden haberdar olmak için kaydolun!</p>
+                    <div class="container w-50 mb-5">
+                        <form method="post">
+                            <div class="row text-center">
+                                <div class="col-lg-5 mx-auto">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Ad Soyad">
+                                </div>
+                                <div class="col-lg-5 mx-auto mt-3 mt-lg-0">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="mail@example.com">
+                                </div>
+                                <div class="col-lg-2 mx-auto mt-3 mt-lg-0">
+                                    <button type="submit" class="btn btn-outline-secondary">Kaydol</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

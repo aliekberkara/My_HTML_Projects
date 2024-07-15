@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>NEU Sİber - İletişim</title>
+{% endblock title %}
+
+{% block body %}
+    <section class="py-5 text-center d-flex justify-content-center align-items-center text-dark mt-5">
+        <div class="container">
+            <p class="display-5 py-5 pe-none fw-bolder text-body-secondary font-monospace">İletişim</p>
+            <div class="row bg-light rounded-5 py-5">
+                <div class="col-md-12 mb-5 mb-lg-0 mx-auto">
+                    <p class="fs-4 pe-none fw-bolder text-body-secondary font-monospace">Mesaj Gönder</p>
+                    <center>
+                        <form method="post">
+                            <div class="form-floating mb-3 w-75 overflow-hidden">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız:">
+                                <label for="name">Adınız Soyadınız</label>
+                            </div>
+                            <div class="form-floating mb-3 w-75 overflow-hidden">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz">
+                                <label for="email">E-posta Adresiniz</label>
+                            </div>
+                            <div class="form-floating w-75 overflow-hidden">
+                                <textarea class="form-control" style="height: 200px;" name="message" placeholder="Mesajınız" id="message"></textarea>
+                                <label for="message">Mesajınız</label>
+                            </div>
+                            <br>
+                            <div class="w-75 text-end">
+                                <button class="btn btn-secondary" type="submit">Gönder</button>
+                            </div>
+                        </form>
+                    </center>
+                    <p class="mt-5 pt-5 fs-4 pe-none fw-bolder text-body-secondary font-monospace">İletişim <br><br></p>
+                    <div class="w-75 mx-auto">
+                        <p class="fs-5 text-break fw-medium lh-base font-monospace text-body-secondary pe-none"><i class="bi bi-envelope-fill"></i> neusiberguvenlik@gmail.com <br><br> <i class="bi bi-telephone-fill"></i> (542)-627-57-56 <br><br> Bu iletişim adreslerinden bize ulaşabilirsiniz... <br><br></p>
+                    </div>
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.7582766444752!2d32.41748357651676!3d37.865946006901844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d086c1bf62f8f3%3A0x707045fe545b6c95!2sNecmettin%20Erbakan%20%C3%9Cniversitesi%20K%C3%B6yce%C4%9Fiz%20Yerle%C5%9Fkesi!5e0!3m2!1str!2str!4v1686123870284!5m2!1str!2str" width="75%" height="500px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

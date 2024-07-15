@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>CV Builder - Anasayfa</title>
+{% endblock title %}
+
+{% block navbar %}
+    {% include "includes/navbar1.html" %}
+{% endblock navbar %}
+
+{% block header %}
+    <style>
+        .header{
+            background: rgb(94, 10, 150);
+            width: 100%;
+            height: 25px;
+        }
+
+        .header p{
+            text-align: center;
+            margin-top: 8px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            user-select: none;
+        }
+
+        .slogan{
+            background: rgb(6,5,90);
+            border: 3px;
+            padding: 10px;
+            width: 39%;
+            margin: auto;
+            height: 100px;
+        }
+
+        .slogan p{
+            width: 500px;
+            color: white;
+            user-select: none;
+            font-size: 20px;
+        }
+
+        .button li a{
+            background-color: rgb(98, 33, 172);
+            color: white;
+            margin-right: 45%;
+            margin-top: 8%;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 4px;
+            float: right;
+        }
+    </style>
+
+    <div class = "header">
+        <p>CV Builder</p>
+        <br>
+        <br>
+        <br>
+        <br>
+            <div class="slogan">
+                <p>
+                Bilgilerinizi Girerek CV'nizi Oluşturun.
+                <br>
+                İşe Girme İhtimalinizi Arttırın.
+                </p>
+            </div>
+            <div class="button">
+                {% if session["logged_in"] %}
+                    <li><a href="/cvpersonal">CV Oluştur</a></li>
+                {% else %}
+                    <li><a href="/cvlogin">CV Oluştur</a></li>
+                {% endif %}
+                
+            </div>
+    </div>
+{% endblock header %}
